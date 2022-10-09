@@ -1,12 +1,12 @@
 # Service for importing data from external ONLYOFFICE spreadsheets
 
-[ONLYOFFICE](https://www.onlyoffice.com/) doesn't have the possiblity of importing data from external spreadsheets (e.g. ImportRange in Google). This small web-service works together with a [plugin](https://github.com/dandm1986/Import_Data_Plugin_ONLYOFFICE) installed in a desktop ONLYOFFICE version.
+[ONLYOFFICE](https://www.onlyoffice.com/) doesn't have the possiblity of importing data from external spreadsheets (e.g. ImportRange in Google). This small web-service works together with a [plugin](https://github.com/dandm1986/Import_Data_Plugin_ONLYOFFICE) installed in a desktop ONLYOFFICE version. Uses [XLSX](https://www.npmjs.com/package/xlsx) library to parse spreadsheets.
 
 `Endpoint` https://import-data-onlyoffice.herokuapp.com/api/v1/methods/import-range
 
 ## Get access token
 
-Normally is done by [plugin](https://github.com/dandm1986/Import_Data_Plugin_ONLYOFFICE). Just for sake of API testing with Postman etc.
+Normally is done by the [plugin](https://github.com/dandm1986/Import_Data_Plugin_ONLYOFFICE). Just for the sake of API testing with Postman etc.
 
 `GET url_to_onlyoffice_server/api/2.0/authentication.json`
 
