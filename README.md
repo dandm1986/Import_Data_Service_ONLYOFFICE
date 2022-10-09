@@ -4,13 +4,35 @@
 
 `Endpoint` https://import-data-onlyoffice.herokuapp.com/api/v1/methods/import-range
 
-## Request structure
+## Get access token
 
-`Get an access token`
+Normally is done by [plugin](https://github.com/dandm1986/Import_Data_Plugin_ONLYOFFICE). Just for sake of API testing with Postman etc.
+
+`GET url_to_onlyoffice_server/api/2.0/authentication.json`
+
+```
+{
+    "userName": "user@gmail.com",
+    "password": "123456"
+}
+```
+
+`Response example`
+
+```
+{
+    "count": 1,
+    "status": 0,
+    "statusCode": 201,
+    "response": {
+        "token": "hv89dvamkuKiD/0VCGkLzJAPCPYg8XLAiYv8sDmaei8xKrdK5u3ZofV1oyHy+G3NOgMqWYNbRIIE8LIAQlSke0AXjNMlRxx16cfKQoa60W6RiMMoJroSEQjhAgUTP3adXqEN0cMm+UsRt1pPYns9u+Nby1qpAFg8Y9mz8a1lMs=",
+        "expires": "2023-10-09T13:16:00.0989167+02:00"
+    }
+}
 
 ```
 
-```
+## Get spreadsheet data
 
 `POST api/v1/methods/import-range`
 
