@@ -6,10 +6,10 @@ exports.getCellsValues = catchAsync(async function (req, res, next) {
     worksheet = req.body.worksheet,
     cellRange = req.body.range,
     targetCell = req.body.targetCell,
-    // token = req.body.token,
+    token = req.body.token,
     serverURL = model.getSeverURL(req.body.urlToFile),
     fileID = model.getFileID(req.body.urlToFile),
-    token = await model.getToken(serverURL, userData),
+    // token = await model.getToken(serverURL, userData),
     cellData = await model.getCellData(serverURL, fileID, token, worksheet);
 
   const columnsArr = model.generateColumnsArray(cellRange),
